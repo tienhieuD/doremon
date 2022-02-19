@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 const Footer = () => {
     return (
         <>
-            <div className="bg-[#13172B]">
+            <div className="bg-[#13172B] mt-12">
                 <div className=" text-white container mx-auto grid gap-8 sm:gap-16 pt-20 pb-10">
                     <div className='flex flex-col items-center sm:items-start'>
                         <h2 className=" text-14 font-inter">
