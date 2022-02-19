@@ -13,14 +13,14 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="header-background-proposal pt-20 flex flex-col justify-center items-center">
-        <div className="">
+      <div className="header-background-proposal pt-12 sm:pt-20 px-2 sm:px-0 flex flex-col justify-center items-center">
+        <div className="s">
           <img src="/svg/Title-Intro.svg" className=" h-auto" />
         </div>
         <div className='header-background-frame-proposal px-16 mt-8'>
           <img src="/svg/FrameHeader.svg" className=" h-auto" />
         </div>
-        <img src="/svg/ButtonSolid.svg" className=" h-auto mt-8" />
+        <img src="/svg/ButtonSolid.svg" className=" h-10 sm:h-auto mt-8" />
       </div>
     </>
   )
