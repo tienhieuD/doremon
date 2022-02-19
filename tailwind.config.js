@@ -54,12 +54,14 @@ module.exports = {
         cyan: getSemanticColors(colors.cyan),
         purple: getSemanticColors(colors.purple),
         pink: getSemanticColors(colors.pink),
+        bgFqa: '#13172B',
+        bgCoreTeam: '#F8F8F8',
       },
       fontFamily: {
         // body: ['Open Sans', 'sans-serif'],
         body: ['hk_grotesk', 'sans-serif'],
-        inter : ['Inter', 'sans-serif'],
-        cabinet : ['Cabinet Grotesk', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        cabinet: ['Cabinet Grotesk', 'sans-serif'],
       },
       fontSize: {
         8: '8px',
