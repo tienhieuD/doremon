@@ -20,7 +20,17 @@ const ItemProposal = (props) => {
 
     const renderPercent = (percent) => {
         var indents = [];
-        for (var i = 0; i < percent; i++) {
+        let value;
+        if (percent < 20) {
+            value = percent - 2
+        } else if (percent < 50) {
+            value = percent - 6
+        } else if (percent < 80) {
+            value = percent - 11
+        } else {
+            value = percent - 15
+        }
+        for (var i = 0; i < value; i++) {
             indents.push(<div className=' p-2px bg-white ml-1 transform rotate-12 bg-opacity-10 ' key={i}></div>);
         }
         return indents;
