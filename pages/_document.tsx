@@ -4,7 +4,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head >
+        <link href="https://api.fontshare.com/css?f[]=cabinet-grotesk@800&display=swap" rel="stylesheet"/>
+        </Head>
         <body>
           <Main />
           <NextScript />
