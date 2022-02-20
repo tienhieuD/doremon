@@ -5,12 +5,12 @@ const SectionInvest = () => {
     <section className='pt-10'>
       <div className='bg-grid-pattern sm:bg-main sm:bg-bottom bg-no-repeat bg-top bg-contain sm:min-h-3xl'>
         <div className='sm:container sm:relative sm:mx-auto sm:my-auto'>
-          <h1 className='text-white px-6 sm:text-center'>
+          <h1 className='font-cabinet font-black text-white px-6 sm:text-center'>
             <span className='block text-4xl font-black leading-normal sm:text-8xl'>Invest together</span>
             <span className='block text-4xl font-black sm:text-8xl sm:ml-80'>Win together</span>
           </h1>
           <div className='sm:bg-grid-pattern sm:bg-center sm:absolute sm:max-w-sm sm:right-[15%] sm:mt-32'>
-            <p className='text-white font-medium mt-4 px-6'>
+            <p className='text-white font-medium mt-4 px-6 font-inter'>
               Doraemon.Finance is revolutionizing investing by changing how communities and
               capital work together through accessible, effortless, and social web3 technologies.
               Transform any wallet into a powerful web3 investment club.

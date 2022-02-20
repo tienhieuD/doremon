@@ -3,7 +3,7 @@ import React from 'react';
 const SectionTokenomics = () => {
   return (
     <section className='pt-14 sm:pt-40'>
-      <h2 className='text-white font-black text-28 text-center mb-10 sm:text-48 sm:mb-20'>Tokenomics</h2>
+      <h2 className='font-cabinet text-white font-black text-28 text-center mb-10 sm:text-48 sm:mb-20'>Tokenomics</h2>
       <img className='mx-auto sm:hidden' src='/images/tokenomics.png' />
       <img className='mx-auto hidden sm:block mb-40' src='/images/tokenomics2.png' />
       <ul className='mx-6 pb-20 sm:hidden'>

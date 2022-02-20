@@ -4,7 +4,7 @@ const SectionDAO = () => {
   return (
     <section>
       <div className='pt-16 sm:container sm:mx-auto'>
-        <h2 className='font-black text-28 leading-8 text-center mb-10 mx-6 sm:text-48 sm:mt-20 sm:mb-24 sm:leading-normal'>
+        <h2 className='font-cabinet font-black text-28 leading-8 text-center mb-10 mx-6 sm:text-48 sm:mt-20 sm:mb-24 sm:leading-normal'>
           Powerful investing DAO tools, <br className='hidden sm:block' /> right out of the box
         </h2>
         <div className='sm:flex sm:flex-wrap sm:mb-40'>
