@@ -5,9 +5,9 @@ import Content from "./content"
 export default function ProposalPage() {
   return (
     <>
-      <Header/>
-      <Content/>
-      <Footer/>
+      <Header />
+      <Content />
+      <Footer />
     </>
   )
 }
