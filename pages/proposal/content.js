@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import ItemProposal from './itemProposal'
 
 const dataClone = [
   {
     title: 'Fund Doraemon Foundation setup and 2022 operations',
-    timeEnd: '12/31/2022 23:59:59',
+    timeEnd: '2/23/2022 23:59:59',
     status: 'Available',
     BNBPresent: 150,
     totalBNB: 300,
@@ -13,7 +13,7 @@ const dataClone = [
   },
   {
     title: 'Proposal to Re-Elect Nouns DAO Core Contributor',
-    timeEnd: '12/31/2022 23:59:59',
+    timeEnd: '2/23/2022 23:59:59',
     status: 'Ended',
     BNBPresent: 20,
     totalBNB: 200,
@@ -22,7 +22,7 @@ const dataClone = [
   },
   {
     title: 'setProposalThresholdBPS(25)',
-    timeEnd: '12/31/2022 23:59:59',
+    timeEnd: '2/23/2022 23:59:59',
     status: 'Pause',
     BNBPresent: 800,
     totalBNB: 1000,
@@ -31,7 +31,7 @@ const dataClone = [
   },
   {
     title: 'Reimburse the Foundation for the purchase of Noun 179',
-    timeEnd: '12/31/2022 23:59:59',
+    timeEnd: '2/23/2022 23:59:59',
     status: 'Pause',
     BNBPresent: 400,
     totalBNB: 1000,
@@ -95,24 +95,35 @@ const dataClone = [
 ]
 
 const Content = () => {
+  const [size, setSize] = useState([0, 0]);
+
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
   return (
-    <>
-      <div className="flex flex-col items-center justify-center mx-4 sm:mx-0">
-        <div className=" text-24 sm:text-32 mt-12 sm:mt-20 font-bold mb-8">
-          List Proposals
-        </div>
-        {dataClone.map((ele, index) => <ItemProposal
-          title={ele.title}
-          timeEnd={ele.timeEnd}
-          status={ele.status}
-          BNBPresent={ele.BNBPresent}
-          totalBNB={ele.totalBNB}
-          totalMember={ele.totalMember}
-          createdBy={ele.createdBy}
-          index={index}
-        />)}
+    <div className="flex flex-col items-center justify-center mx-4 sm:mx-0">
+      <div className=" text-24 sm:text-32 mt-12 sm:mt-20 font-bold mb-8">
+        List Proposals
       </div>
-    </>
+      {dataClone.map((ele, index) => <ItemProposal
+        title={ele.title}
+        timeEnd={ele.timeEnd}
+        status={ele.status}
+        BNBPresent={ele.BNBPresent}
+        totalBNB={ele.totalBNB}
+        totalMember={ele.totalMember}
+        createdBy={ele.createdBy}
+        index={index}
+        key={index}
+        size={size}
+      />)}
+    </div>
   )
 }
 

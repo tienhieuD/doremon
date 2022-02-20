@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
 
 const ItemProposal = (props) => {
     const {
@@ -9,7 +9,8 @@ const ItemProposal = (props) => {
         totalBNB,
         totalMember,
         createdBy,
-        index } = props;
+        index,
+        size } = props;
     const [count, setCount] = useState([]);
     const [partyTime, setPartyTime] = useState(false);
     const [days, setDays] = useState(0);
@@ -17,30 +18,26 @@ const ItemProposal = (props) => {
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
     const percent = Math.round(BNBPresent / totalBNB * 100);
+    const ref = useRef(null);
 
-    const renderPercent = (percent) => {
+    const renderPercent = () => {
         var indents = [];
-        let value;
-        if (percent < 20) {
-            value = percent - 2
-        } else if (percent < 50) {
-            value = percent - 6
-        } else if (percent < 80) {
-            value = percent - 11
-        } else {
-            value = percent - 15
-        }
+        const widthParent = ref.current.offsetWidth;
+        const value = Math.round(widthParent / 12.5);
         for (var i = 0; i < value; i++) {
-            indents.push(<div className=' p-2px bg-white ml-1 transform rotate-12 bg-opacity-10 ' key={i}></div>);
+            indents.push(<div className=' p-2px bg-white ml-1 transform rotate-12 bg-opacity-10' key={i}></div>);
         }
         return indents;
     }
 
     useEffect(() => {
-        setCount(renderPercent(Math.round(BNBPresent / totalBNB * 100)));
+        setCount(renderPercent());
+    }, [size]);
+
+    useEffect(() => {
         const target = new Date(timeEnd);
 
-        const interval = setInterval(() => {
+        const interval = () => {
             const now = new Date();
             const difference = target.getTime() - now.getTime();
 
@@ -61,19 +58,18 @@ const ItemProposal = (props) => {
             if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
                 setPartyTime(true);
             }
-        }, 1000);
+        }
 
-        setTimeout(() => {
-            if (status === 'Pause') {
-                clearInterval(interval);
-            }
-        }, 1000);
-
+        if (status === 'Pause') {
+            interval();
+        } else {
+            setInterval(interval, 1000)
+        }
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div className='items-proposal p-4 font-inter w-2/3 flex gap-4 my-4'>
+        <div className='items-proposal p-4 font-inter w-2/3 flex gap-4 my-4 '>
             <div className='bg-[#505D7D] w-14 h-14 text-white font-bold text-20 rounded-xl flex justify-center items-center'>
                 {index + 1}
             </div>
@@ -95,7 +91,7 @@ const ItemProposal = (props) => {
                     </div>
                 </section>
                 <section className='bg-[#E2E2E2] rounded h-4'>
-                    <div className='h-4 rounded bg-[#3E74FF] flex gap-1' style={{ width: percent + '%' }}>
+                    <div className='h-4 rounded bg-[#3E74FF] flex gap-1 overflow-hidden' ref={ref} style={{ width: percent + '%' }}>
                         {count}
                     </div>
                 </section>
