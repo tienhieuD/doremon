@@ -4,11 +4,11 @@ const Header = () => {
   return (
     <>
       <div>
-        <ul class="flex justify-between m-8">
-          <li class="mr-3">
+        <ul className="flex justify-between m-8">
+          <li className="mr-3">
             <img src="/svg/Logo.svg" className=" h-auto" />
           </li>
-          <li class="mr-3">
+          <li className="mr-3">
             <img src="/svg/Button-Header.svg" className=" h-auto" />
           </li>
         </ul>
