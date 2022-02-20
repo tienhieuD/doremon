@@ -68,7 +68,7 @@ const data = [
 export default function CoreTeamMember() {
   const renderList = () => {
     return data.map((el, index) => (
-      <div className="my-4 px-4 sm:w-1/2 lg:w-1/4 w-1" key={index}>
+      <div data-aos="fade-up" data-aos-delay={100 * (index + 1)} className="my-4 px-4 sm:w-1/2 lg:w-1/4 w-1" key={index}>
         <div className="sm:w-full w-80 h-auto bg-bgCoreTeam border rounded-2xl border-gray-200 px-4 py-6 text-center mx-auto ">
           <img src={el.image} className="w-32 h-32 mb-4 m-auto" />
           <div className="text-xl leading-7 font-semibold not-italic mb-2 font-inter text-bgFqa">
@@ -88,9 +88,9 @@ export default function CoreTeamMember() {
     ))
   }
   return (
-    <div id="core-team-member" className="bg-bgCoreTeam">
-      <div className="container mx-auto pb-20 sm:pb-32">
-        <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-bgFqa font-cabinet text-center">
+    <div data-aos="fade-up" data-aos-delay="200" id="core-team-member" className="bg-bgCoreTeam">
+      <div className="container mx-auto pb-20 sm:pb-32 sm:pt-10">
+        <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 mt-0 text-bgFqa font-cabinet text-center">
           Core team member
         </div>
         <div className="sm:flex sm:flex-wrap sm:px-20">{renderList()}</div>

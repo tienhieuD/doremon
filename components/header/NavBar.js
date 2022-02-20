@@ -32,7 +32,7 @@ const Menu = ({ className, toggleOpen }) => {
   return <div className={className || ""}>
     <ul className='mt-16 sm:mt-0 sm:flex sm:gap-8 animate-emerge-up'>
       {data.map(item => (
-        <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'>
+        <li key={item.href} className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'>
           <a href={item.href} onClick={() => toggleOpen && toggleOpen()}>{item.name}</a>
         </li>
       ))}
@@ -53,7 +53,7 @@ const NavBar = () => {
   const toggleOpen = () => setOpen(!open)
 
   return (
-    <nav className={`${open && `fixed w-full h-full`} sm:container sm:mx-auto pt-11 pb-5 px-7 overflow-auto bg-gradient-to-br from-[#3869e8] to-[#50a3e4] sm:pt-9 sm:from-transparent sm:to-transparent`}>
+    <nav data-aos="zoom-out" data-aos-delay="200" className={`${open && `fixed w-full h-full`} sm:container sm:mx-auto pt-11 pb-5 px-7 overflow-auto bg-gradient-to-br from-[#3869e8] to-[#50a3e4] sm:pt-9 sm:from-transparent sm:to-transparent`}>
       <div className='flex justify-between'>
         <a href='#' className='flex transition-all hover:scale-110'>
           <img src='/images/logo.png' className='h-12 mr-2' />

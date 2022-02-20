@@ -37,13 +37,13 @@ const SectionDAO = () => {
   return (
     <section id='dao'>
       <div className='pt-16 sm:container sm:mx-auto'>
-        <h2 className='font-cabinet font-black text-28 leading-8 text-center mb-10 mx-6 sm:text-48 sm:mt-20 sm:mb-24 sm:leading-normal'>
+        <h2 data-aos="fade-up" data-aos-delay="200" className='font-cabinet font-black text-28 leading-8 text-center mb-10 mx-6 sm:text-48 sm:mt-20 sm:mb-24 sm:leading-normal'>
           Powerful investing DAO tools, <br className='hidden sm:block' /> right out of the box
         </h2>
         <div className='sm:flex sm:flex-wrap sm:mb-40'>
           {
-            data.map(item => (
-              <article className='px-6 mb-10 sm:w-1/3 hover:scale-105 transition-all'>
+            data.map((item, index) => (
+              <article data-aos="fade-up" data-aos-delay={100 * (index + 1)} className='px-6 mb-10 sm:w-1/3 hover:scale-105 transition-all'>
                 <figure>
                   <a href='#'>
                     <img className='w-full' src={item.imgUrl} />

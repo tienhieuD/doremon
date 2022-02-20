@@ -3,9 +3,9 @@ import React from 'react';
 const SectionTokenomics = () => {
   return (
     <section id="tokenomics" className='pt-14 sm:pt-40'>
-      <h2 className='font-cabinet text-white font-black text-28 text-center mb-10 sm:text-48 sm:mb-20'>Tokenomics</h2>
-      <img className='mx-auto sm:hidden ' src='/images/tokenomics.png' />
-      <img className='mx-auto hidden sm:block mb-40 ' src='/images/tokenomics2.png' />
+      <h2 data-aos="fade-up" data-aos-delay="200" className='font-cabinet text-white font-black text-28 text-center mb-10 sm:text-48 sm:mb-20'>Tokenomics</h2>
+      <img data-aos="fade-up" data-aos-delay="600" className='mx-auto sm:hidden ' src='/images/tokenomics.png' />
+      <img data-aos="fade-up" data-aos-delay="600" className='mx-auto hidden sm:block mb-40 ' src='/images/tokenomics2.png' />
       <ul className='mx-6 pb-20 sm:hidden'>
         <li className='flex mt-6'>
           <img className='w-12 mr-4' src="/images/tk1.png" />
@@ -58,7 +58,7 @@ const SectionTokenomics = () => {
         </li>
       </ul>
 
-      <img src='/images/Divider.png' className='sm:w-full sm:h-1' />
+      <img data-aos="fade-up" data-aos-delay="1000" src='/images/Divider.png' className='sm:w-full sm:h-1' />
     </section>
   )
 }
