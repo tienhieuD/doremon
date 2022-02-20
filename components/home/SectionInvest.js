@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionInvest = () => {
   return (
-    <section className='pt-10'>
+    <section id="invest" className='pt-10'>
       <div className='bg-grid-pattern sm:bg-main sm:bg-bottom bg-no-repeat bg-top bg-contain sm:min-h-3xl'>
         <div className='sm:container sm:relative sm:mx-auto sm:my-auto animate-emerge'>
           <h1 className='font-cabinet font-black text-white px-6 sm:text-center transition-all'>

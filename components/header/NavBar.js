@@ -1,14 +1,41 @@
 import React, { useState } from 'react';
 
+
+const data = [
+  {
+    name: 'How it works',
+    href: '#howitwork'
+  },
+  {
+    name: 'DAO',
+    href: '#dao'
+  },
+  {
+    name: 'Tokenomics',
+    href: '#tokenomics'
+  },
+  {
+    name: 'Roadmap',
+    href: '#roadmap'
+  },
+  {
+    name: 'Team',
+    href: '#core-team-member'
+  },
+  {
+    name: 'FAQ',
+    href: '#faq'
+  },
+]
+
 const Menu = ({ className }) => {
   return <div className={className || ""}>
     <ul className='mt-16 sm:mt-0 sm:flex sm:gap-8 animate-emerge-up'>
-      <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'><a href="#">How it works</a></li>
-      <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'><a href="#">DAO</a></li>
-      <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'><a href="#">Tokenomics</a></li>
-      <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'><a href="#">Roadmap</a></li>
-      <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'><a href="#">Team</a></li>
-      <li className='text-24 text-white font-medium transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:text-16'><a href="#">FAQ</a></li>
+      {data.map(item => (
+        <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'>
+          <a href={item.href}>{item.name}</a>
+        </li>
+      ))}
       <li className='mt-32 sm:mt-0 sm:hidden'>
         <button className='bg-red-500 hover:bg-red-600 transition-all text-white font-semibold w-full rounded-full py-4'>
           Get started

@@ -20,7 +20,7 @@ export default function InvestorsPartners() {
     ))
   }
   return (
-    <div className="w-full bg-bgCoreTeam">
+    <div id="investors-partners" className="w-full bg-bgCoreTeam">
       <div className="container mx-auto pb-24 sm:pb-40">
         <div className="sm:text-5xl text-3xl leading-10 font-black not-italic lg:mb-32 mb-10 text-bgFqa font-cabinet text-center ">
           {'Investors & Partners'}

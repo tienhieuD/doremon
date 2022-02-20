@@ -35,7 +35,7 @@ const data = [
 
 const SectionDAO = () => {
   return (
-    <section>
+    <section id='dao'>
       <div className='pt-16 sm:container sm:mx-auto'>
         <h2 className='font-cabinet font-black text-28 leading-8 text-center mb-10 mx-6 sm:text-48 sm:mt-20 sm:mb-24 sm:leading-normal'>
           Powerful investing DAO tools, <br className='hidden sm:block' /> right out of the box

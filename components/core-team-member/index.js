@@ -88,7 +88,7 @@ export default function CoreTeamMember() {
     ))
   }
   return (
-    <div className="bg-bgCoreTeam">
+    <div id="core-team-member" className="bg-bgCoreTeam">
       <div className="container mx-auto pb-20 sm:pb-32">
         <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-bgFqa font-cabinet text-center">
           Core team member

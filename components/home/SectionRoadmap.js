@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionRoadmap = () => {
   return (
-    <section>
+    <section id="roadmap" className='sm:pt-24'>
       <h2 className='font-cabinet text-white font-black text-28 text-center mt-14 mb-12 sm:text-48 sm:mb-20'>Roadmap</h2>
 
       <img className='mx-auto hidden sm:block' src='/images/roadmap.png' />

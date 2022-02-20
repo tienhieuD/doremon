@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionTokenomics = () => {
   return (
-    <section className='pt-14 sm:pt-40'>
+    <section id="tokenomics" className='pt-14 sm:pt-40'>
       <h2 className='font-cabinet text-white font-black text-28 text-center mb-10 sm:text-48 sm:mb-20'>Tokenomics</h2>
       <img className='mx-auto sm:hidden ' src='/images/tokenomics.png' />
       <img className='mx-auto hidden sm:block mb-40 ' src='/images/tokenomics2.png' />
@@ -58,7 +58,7 @@ const SectionTokenomics = () => {
         </li>
       </ul>
 
-      <img src='/images/Divider.png' className='sm:w-full sm:h-1 sm:mb-32' />
+      <img src='/images/Divider.png' className='sm:w-full sm:h-1' />
     </section>
   )
 }

@@ -24,7 +24,7 @@ const data = [
 
 const SectionHow = () => {
   return (
-    <section>
+    <section id="howitwork">
       <div className='pt-16 sm:container sm:mx-auto'>
         <h2 className='font-cabinet font-black text-28 text-center mb-3 mx-6 sm:text-48 sm:mt-20'>How it works</h2>
         {
