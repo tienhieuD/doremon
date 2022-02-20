@@ -13,13 +13,13 @@ export default function Question(props) {
           {question}
         </div>
         {openAnswer ? (
-          <img src="svg/minus-circle.svg" className="w-10" onClick={onClick} />
+          <img src="svg/minus-circle.svg" className="w-10 " onClick={onClick} />
         ) : (
           <img src="svg/add-circle.svg" className="w-10" onClick={onClick} />
         )}
       </div>
       {openAnswer && (
-        <div className="sm:text-base text-sm leading-6 font-normal not-italic mt-8 text-gray-500 font-inter text-left">
+        <div className="sm:text-base text-sm leading-6 font-normal not-italic mt-8 text-gray-500 font-inter text-left animation-answer">
           {answer}
         </div>
       )}
