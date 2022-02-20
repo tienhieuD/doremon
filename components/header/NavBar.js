@@ -33,7 +33,7 @@ const Menu = ({ className, toggleOpen }) => {
     <ul className='mt-16 sm:mt-0 sm:flex sm:gap-8 animate-emerge-up'>
       {data.map(item => (
         <li className='text-24 text-white font-medium mb-8 transition-colors border-b-2 border-transparent hover:border-white hover:animate-pulse sm:mb-0 sm:text-16'>
-          <a href={item.href} onClick={() => toggleOpen()}>{item.name}</a>
+          <a href={item.href} onClick={() => toggleOpen && toggleOpen()}>{item.name}</a>
         </li>
       ))}
       <li className='mt-32 sm:mt-0 sm:hidden'>
