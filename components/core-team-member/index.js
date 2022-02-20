@@ -1,6 +1,6 @@
 const data = [
   {
-    image: '/example-image.png',
+    image: '/core-team/jamesgun.png',
     name: 'James Gun',
     title: 'CEO',
     description:
@@ -8,7 +8,7 @@ const data = [
     linkedin: 'https://www.linkedin.com',
   },
   {
-    image: '/example-image.png',
+    image: '/core-team/alexbenjamin.svg',
     name: 'Alex Benjamin',
     title: 'CMO',
     description:
@@ -16,7 +16,7 @@ const data = [
     linkedin: 'https://www.linkedin.com',
   },
   {
-    image: '/example-image.png',
+    image: '/core-team/laurazaharia.svg',
     name: 'Laura Zaharia',
     title: 'CTO',
     description:
@@ -24,7 +24,7 @@ const data = [
     linkedin: 'https://www.linkedin.com',
   },
   {
-    image: '/example-image.png',
+    image: '/core-team/emilygarden.svg',
     name: 'Emily Garden',
     title: 'CFO',
     description:
@@ -32,7 +32,7 @@ const data = [
     linkedin: 'https://www.linkedin.com',
   },
   {
-    image: '/example-image.png',
+    image: '/core-team/annawaston.svg',
     name: 'Anna Waston',
     title: 'Blockchain Leader',
     description:
@@ -40,7 +40,7 @@ const data = [
     linkedin: 'https://www.linkedin.com',
   },
   {
-    image: '/example-image.png',
+    image: '/core-team/matthewdanrow.svg',
     name: 'Matthew Danrow',
     title: 'Technical Leader',
     description:
@@ -48,7 +48,7 @@ const data = [
     linkedin: 'https://www.linkedin.com',
   },
   {
-    image: '/example-image.png',
+    image: '/core-team/alexandervergara.svg',
     name: 'Alexander Vergara',
     title: 'Game Developer Leader',
     description:
@@ -56,7 +56,7 @@ const data = [
     linkedin: 'https://www.linkedin.com',
   },
   {
-    image: '/example-image.png',
+    image: '/core-team/marcdaniels.svg',
     name: 'Marc Daniels',
     title: 'Head of UI/UX',
     description:
@@ -89,7 +89,7 @@ export default function CoreTeamMember() {
     ))
   }
   return (
-    <div className="bg-bgCoreTeam__">
+    <div className="bg-bgCoreTeam">
       <div className="container mx-auto pb-20 sm:pb-32">
         <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-bgFqa font-cabinet text-center">
           Core team member
