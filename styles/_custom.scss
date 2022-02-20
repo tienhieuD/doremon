@@ -173,3 +173,70 @@ html {
   @apply mr-2;
   color: #ee3ea4 !important;
 }
+
+.bg-invest {
+  background-image: 
+    url('/images/invest/Ellipse4.png'), 
+    url('/images/invest/Ellipse4.png'), 
+    url('/images/invest/Ellipse3.png'), 
+    url('/images/invest/Vector1.png'), 
+    url('/images/invest/Group1.png'), 
+    url('/images/invest/Vector.png');
+  background-repeat: no-repeat;
+  background-position: 70% 0%, 5% 65%, 95% 75%, 5% 20%, left bottom, 95% 5%;
+  background-size: auto, auto, auto, auto, contain, auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  background-color: white;
+  top: 20px;
+  bottom: 0;
+  margin-left: -3px;
+  left: 16px;
+  border-radius: 9999px;
+}
+.timeline__container {
+  padding: 0;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  padding-left: 52px;
+}
+.timeline__container::after {
+  content: '';
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  z-index: 1;
+  background-image:url('/images/timelinedot.svg');
+  background-size:contain;
+}
+
+ul.ticks {
+  li {
+    position: relative;
+    padding-left: 28px;
+  }
+  li::before {
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/tick.png');
+    background-size: contain;
+    top: 4px;
+    left: 0;
+  }
+}
+/* End - The actual timeline (the vertical ruler) */
+

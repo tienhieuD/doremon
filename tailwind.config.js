@@ -284,6 +284,11 @@ module.exports = {
         inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
         none: 'none',
       },
+      backgroundImage: {
+        'grid-pattern': "url('/images/invest/PixelGrid.png')",
+        'main': "url('/images/bg.png')",
+        'blue-conic': "conic-gradient(from 180deg at 50% 50%, #0088CC 0deg, #1751E7 108.75deg, #4A75E6 223.13deg, #3C9BE0 320.63deg, #0088CC 360deg);"
+      },
       padding: {
         '1px': '1px',
         '2px': '2px',

@@ -1,12 +1,29 @@
 import { useEffect, useState } from 'react'
+import Header from 'components/header'
+import { SectionDAO, SectionHow, SectionInvest, SectionRoadmap, SectionTokenomics, SectionCover } from 'components/home'
+import SectionCoreTeamMember from 'components/core-team-member'
+import SectionFAQ from 'components/faq'
+import SectionInvestorsPartners from 'components/investors-partners'
+import Footer from 'components/footer'
 
 export default function HomePage() {
   return (
     <>
-      <div className="w-screen h-screen flex flex-col items-center justify-center">
-        <h1 className="">Hello world !!!</h1>
-        <h1 className="">Let edit me now!</h1>
+      <Header />
+
+      <SectionHow />
+      <SectionDAO />
+
+      <div className='bg-gradient-to-br from-[#2057e6] to-[#3c99e1]'>
+        <SectionTokenomics />
+        <SectionRoadmap />
       </div>
+
+      <SectionCoreTeamMember />
+      <SectionInvestorsPartners />
+      <SectionFAQ />
+      <SectionCover />
+      <Footer />
     </>
   )
 }
