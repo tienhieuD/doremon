@@ -238,5 +238,14 @@ ul.ticks {
     left: 0;
   }
 }
+
+.animation-answer{
+  animation: delay 0.5s linear;
+
+}
+@keyframes delay {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
 /* End - The actual timeline (the vertical ruler) */
 
