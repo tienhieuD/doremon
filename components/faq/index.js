@@ -42,12 +42,10 @@ export default function Faq() {
       <div id="faq" className="w-full h-auto flex flex-col items-center justify-center ">
         <div className="lg:px-40 px-6 sm:py-24 py-14 bg-bgFqa w-full h-auto text-center">
           <div className='container mx-auto'>
-            <div data-aos="fade-up" data-aos-delay="400" className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-white font-cabinet">
+            <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-white font-cabinet">
               FAQs and answers
             </div>
-            <div data-aos="fade-down" data-aos-delay="400" >
-              {renderQuestion()}
-            </div>
+            {renderQuestion()}
           </div>
         </div>
       </div>

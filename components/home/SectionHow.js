@@ -26,10 +26,10 @@ const SectionHow = () => {
   return (
     <section id="howitwork">
       <div className='pt-16 sm:container sm:mx-auto'>
-        <h2 data-aos="fade-up" data-aos-delay="200" className='font-cabinet font-black text-28 text-center mb-3 mx-6 sm:text-48 sm:mt-20'>How it works</h2>
+        <h2 className='font-cabinet font-black text-28 text-center mb-3 mx-6 sm:text-48 sm:mt-20'>How it works</h2>
         {
           data.map((item, index) => (
-            <article data-aos={index % 2 ? `fade-right` : `fade-left`} data-aos-delay="100" className={`mb-10 sm:flex ${index % 2 === 0 ? 'sm:flex-row-reverse' : null} sm:justify-center sm:mt-24`}>
+            <article className={`mb-10 sm:flex ${index % 2 === 0 ? 'sm:flex-row-reverse' : null} sm:justify-center sm:mt-24`}>
               <figure className='m-6 sm:w-[520px] sm:mx-12'>
                 <img className='w-full' src={item.imgUrl} />
               </figure>

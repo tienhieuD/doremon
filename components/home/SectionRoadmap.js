@@ -2,10 +2,10 @@ import React from 'react';
 
 const SectionRoadmap = () => {
   return (
-    <section data-aos="fade-up" data-aos-delay="200" id="roadmap" className='sm:pt-24'>
-      <h2 data-aos="fade-up" data-aos-delay="400" className='font-cabinet text-white font-black text-28 text-center mt-14 mb-12 sm:text-48 sm:mb-20'>Roadmap</h2>
+    <section id="roadmap" className='sm:pt-24'>
+      <h2 className='font-cabinet text-white font-black text-28 text-center mt-14 mb-12 sm:text-48 sm:mb-20'>Roadmap</h2>
 
-      <img data-aos="fade-up" data-aos-delay="800" className='mx-auto hidden sm:block' src='/images/roadmap.png' />
+      <img className='mx-auto hidden sm:block' src='/images/roadmap.png' />
 
       <div className="timeline mx-6 sm:hidden">
         <div className="timeline__container mb-10">
