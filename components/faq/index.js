@@ -34,7 +34,8 @@ const data = [
   },
 ]
 export default function Faq() {
-  const renderQuestion = () => data.map((el) => <Question {...el} />)
+  const renderQuestion = () =>
+    data.map((el, index) => <Question {...el} index={index} />)
 
   return (
     <>

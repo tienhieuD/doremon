@@ -67,8 +67,11 @@ const data = [
 
 export default function CoreTeamMember() {
   const renderList = () => {
-    return data.map((el) => (
-      <div className="sm:w-64 w-80 h-auto bg-bgCoreTeam border rounded-2xl border-gray-200 px-4 py-6 text-center my-1 mx-auto">
+    return data.map((el, index) => (
+      <div
+        key={index}
+        className="sm:w-64 w-80 h-auto bg-bgCoreTeam border rounded-2xl border-gray-200 px-4 py-6 text-center my-1 mx-auto"
+      >
         <img src={el.image} className="w-32 h-32 mb-4 m-auto" />
         <div className="text-xl leading-7 font-semibold not-italic mb-2 font-inter text-bgFqa">
           {el.name}

@@ -15,8 +15,8 @@ const data = [
 
 export default function InvestorsPartners() {
   const renderList = () => {
-    return data.map((el) => (
-      <img src={el} className=" m-auto h-24 sm:h-auto px-4" />
+    return data.map((el, index) => (
+      <img src={el} className=" m-auto h-24 sm:h-auto px-4" key={index} />
     ))
   }
   return (

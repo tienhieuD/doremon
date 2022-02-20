@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 
 export default function Question(props) {
-  const { question, answer } = props
+  const { question, answer, index } = props
   const [openAnswer, setOpenAnswer] = useState(false)
   const onClick = () => {
     setOpenAnswer(!openAnswer)
   }
   return (
-    <div className="w-full py-11 border-b border-gray-600">
+    <div className="w-full py-11 border-b border-gray-600" key={index}>
       <div className="w-full flex flex-row justify-between ">
         <div className="sm:text-2xl text-base leading-8 text-white w-max font-inter text-left">
           {question}
