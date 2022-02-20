@@ -4,7 +4,7 @@ const SectionHow = () => {
   return (
     <section>
       <div className='pt-16 sm:container sm:mx-auto'>
-        <h2 className='font-black text-28 text-center mb-3 mx-6 sm:text-48 sm:mt-20'>How it works</h2>
+        <h2 className='font-cabinet font-black text-28 text-center mb-3 mx-6 sm:text-48 sm:mt-20'>How it works</h2>
 
         <article className='mb-10 sm:flex sm:flex-row-reverse sm:justify-center sm:mt-24'>
           <figure className='m-6 sm:w-[520px] sm:mx-12'>
