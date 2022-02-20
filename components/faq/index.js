@@ -38,12 +38,14 @@ export default function Faq() {
 
   return (
     <>
-      <div className="w-screen h-screen flex flex-col items-center justify-center ">
+      <div className="w-full h-auto flex flex-col items-center justify-center ">
         <div className="lg:px-40 px-6 sm:py-24 py-14 bg-bgFqa w-full h-auto text-center">
-          <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-white font-cabinet">
-            FAQs and answers
+          <div className='container mx-auto'>
+            <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-white font-cabinet">
+              FAQs and answers
+            </div>
+            {renderQuestion()}
           </div>
-          {renderQuestion()}
         </div>
       </div>
     </>

@@ -86,12 +86,14 @@ export default function CoreTeamMember() {
     ))
   }
   return (
-    <div className="bg-bgCoreTeam">
-      <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-bgFqa font-cabinet text-center">
-        Core team member
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
-        {renderList()}
+    <div className="bg-bgCoreTeam__">
+      <div className="container mx-auto pb-20 sm:pb-32">
+        <div className="sm:text-5xl text-3xl leading-10 font-black not-italic sm:mb-16 m-10 text-bgFqa font-cabinet text-center">
+          Core team member
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
+          {renderList()}
+        </div>
       </div>
     </div>
   )
