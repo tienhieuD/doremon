@@ -23,7 +23,12 @@ const ItemProposal = (props) => {
     const renderPercent = () => {
         var indents = [];
         const widthParent = ref.current.offsetWidth;
-        const value = Math.round(widthParent / 12.5);
+        let value;
+        if (widthParent < 500) {
+            value = Math.round(widthParent / 12.5);
+        } else {
+            value = Math.round(widthParent / 12);
+        }
         for (var i = 0; i < value; i++) {
             indents.push(<div className=' p-2px bg-white ml-1 transform rotate-12 bg-opacity-10' key={i}></div>);
         }
@@ -69,14 +74,14 @@ const ItemProposal = (props) => {
     }, []);
 
     return (
-        <div className='items-proposal p-4 font-inter w-2/3 flex gap-4 my-4 '>
+        <div className='items-proposal p-4 font-inter w-full sm:w-2/3 flex gap-4 my-4 '>
             <div className='bg-[#505D7D] w-14 h-14 text-white font-bold text-20 rounded-xl flex justify-center items-center'>
                 {index + 1}
             </div>
             <div className='flex flex-col w-full gap-2'>
-                <section className='flex justify-between items-center '>
-                    <p className=' text-xl font-bold'>{title}</p>
-                    <div className='flex items-center gap-2 font-medium'>
+                <section className='flex flex-col sm:flex-row justify-between items-start sm:items-center '>
+                    <p className=' text-16 sm:text-xl font-bold'>{title}</p>
+                    <div className='flex items-center gap-2 text-12 sm:text-base font-medium'>
                         {
                             status === 'Ended' ? '' : status === 'Available' ? (<><p>Ends in</p><section className='bg-[#E2E2E2] rounded-md px-2 py-1'>
                                 {days}: {hours}: {minutes}: {seconds}
@@ -85,21 +90,23 @@ const ItemProposal = (props) => {
                             </section></>))
                         }
 
-                        <section className={`rounded-md text-white px-2 py-1 ${status === 'Available' ? 'bg-[#21C272]' : status === 'Ended' ? 'bg-[#ABB2C4]' : 'bg-[#FFB627]'}`}>
+                        <section className={` rounded-md text-white px-2 py-1 ${status === 'Available' ? 'bg-[#21C272]' : status === 'Ended' ? 'bg-[#ABB2C4]' : 'bg-[#FFB627]'}`}>
                             {status}
                         </section>
                     </div>
                 </section>
-                <section className='bg-[#E2E2E2] rounded h-4'>
-                    <div className='h-4 rounded bg-[#3E74FF] flex gap-1 overflow-hidden' ref={ref} style={{ width: percent + '%' }}>
+                <section className='bg-[#E2E2E2] rounded h-4 flex gap-1' ref={ref}>
+                    <div className='h-4 rounded bg-[#3E74FF] flex gap-1' style={{ width: percent + '%' }}>
                         {count}
                     </div>
+                    <div className='h-4 rounded bg-red-500 flex gap-1' style={{ width: 100 - percent + '%' }}>
+                    </div>
                 </section>
-                <section className='flex justify-between'>
+                <section className='flex justify-between flex-col sm:flex-row text-14 sm:text-base'>
                     <div>
                         <p className=' font-medium'><span className=' text-red-500'>{BNBPresent} BNB raised</span> of {totalBNB} BNB ({Math.round(BNBPresent / totalBNB * 100)}%)</p>
                     </div>
-                    <div className='flex gap-2'>
+                    <div className='flex gap-2 '>
                         <p className=' font-thin'>Created by <span className='font-medium'>{createdBy}</span></p>
                         <span className=' p-1px bg-gray-600 bg-opacity-20'></span>
                         <section className='flex space-x-1' >

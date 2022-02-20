@@ -21,7 +21,7 @@ const dataClone = [
     createdBy: 'Athena',
   },
   {
-    title: 'setProposalThresholdBPS(25)',
+    title: 'setProposal ThresholdBPS(25)',
     timeEnd: '2/23/2022 23:59:59',
     status: 'Pause',
     BNBPresent: 800,
