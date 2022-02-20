@@ -1,14 +1,17 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
 
-const ItemProposal = (props) => {
+const ItemProposal = (props: any) => {
     const {
         title,
         timeEnd,
         status,
+        votes,
         BNBPresent,
         totalBNB,
+        agree,
+        reject,
         totalMember,
-        createdBy,
+        proposedBy,
         index,
         size } = props;
     const [count, setCount] = useState([]);
@@ -17,7 +20,7 @@ const ItemProposal = (props) => {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
-    const percent = Math.round(BNBPresent / totalBNB * 100);
+    const percent = Math.round(agree / votes * 100);
     const ref = useRef(null);
 
     const renderPercent = () => {
@@ -42,7 +45,7 @@ const ItemProposal = (props) => {
     useEffect(() => {
         const target = new Date(timeEnd);
 
-        const interval = () => {
+        const interval: any = () => {
             const now = new Date();
             const difference = target.getTime() - now.getTime();
 
@@ -76,7 +79,7 @@ const ItemProposal = (props) => {
     return (
         <div className='items-proposal p-4 font-inter w-full sm:w-2/3 flex gap-4 my-4 '>
             <div className='bg-[#505D7D] w-14 h-14 text-white font-bold text-20 rounded-xl flex justify-center items-center'>
-                {index + 1}
+                {index}
             </div>
             <div className='flex flex-col w-full gap-2'>
                 <section className='flex flex-col sm:flex-row justify-between items-start sm:items-center '>
@@ -103,16 +106,25 @@ const ItemProposal = (props) => {
                     </div>
                 </section>
                 <section className='flex justify-between flex-col sm:flex-row text-14 sm:text-base'>
-                    <div>
-                        <p className=' font-medium'><span className=' text-red-500'>{BNBPresent} BNB raised</span> of {totalBNB} BNB ({Math.round(BNBPresent / totalBNB * 100)}%)</p>
-                    </div>
-                    <div className='flex gap-2 '>
-                        <p className=' font-thin'>Created by <span className='font-medium'>{createdBy}</span></p>
+                    <div className='flex gap-2 text-12 sm:text-base '>
+                        <p className=' font-medium'>{votes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} votes </p>
                         <span className=' p-1px bg-gray-600 bg-opacity-20'></span>
-                        <section className='flex space-x-1' >
+                        <div className='flex font-extralight'>
+                            <img src="/svg/arrow-up.svg" className=" h-auto" />
+                            <p>{agree} agree</p>
+                        </div>
+                        <div className='flex font-extralight'>
+                            <img src="/svg/arrow-down.svg" className=" h-auto" />
+                            <p>{reject} reject</p>
+                        </div>
+                    </div>
+                    <div className='flex gap-2 self-end'>
+                        <p className=' font-thin'>Proposed by <span className='font-medium'>{proposedBy}</span></p>
+                        {/* <span className=' p-1px bg-gray-600 bg-opacity-20'></span> */}
+                        {/* <section className='flex space-x-1' >
                             <img src="/svg/Members.svg" className=" h-auto" />
                             <p>{totalMember} members</p>
-                        </section>
+                        </section> */}
                     </div>
                 </section>
             </div>
